@@ -143,22 +143,10 @@ submit a [Contributor License Agreement](http://opensource.imageworks.com/cla/).
 
 ### Start using Scala Migrations
 
-Maven Central hosts compiled jars for Scala 2.8.0 and greater,
-compiled on JDK 1.6/JDBC 4.  All Scala Migrations artifacts have a
-`groupId` of `com.imageworks.scala-migrations`.  A separate
-compilation and publish is done for each Scala version, with a
-distinct artifactId of the form `scala-migrations_X.Y.Z`, where
-`X.Y.Z` is the Scala version used to compile Scala Migrations.
-
-Direct links to jars compiled against 2.8.0 or greater can be found at
-[Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3Acom.imageworks.scala-migrations).
-Jars for Scala 2.7.7 for JDBC 3 and JDBC 4 are on the
-[Downloads](http://code.google.com/p/scala-migrations/downloads/list) page.
-
-#### sbt
-
 **Note:** This fork does not push it's artifacts to any maven repositories at this time
 you will have to link to the `.jar` files located in the `builds` folder.
+
+#### sbt
 
 Add the following to your `build.sbt`:
 
