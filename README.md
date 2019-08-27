@@ -157,32 +157,27 @@ Jars for Scala 2.7.7 for JDBC 3 and JDBC 4 are on the
 
 #### sbt
 
+**Note:** This fork does not push it's artifacts to any maven repositories at this time
+you will have to link to the `.jar` files located in the `builds` folder.
+
 Add the following to your `build.sbt`:
 
+*Scala 2.10*
+
 ```scala
-libraryDependencies ++= Seq("com.imageworks.scala-migrations" %% "scala-migrations" % "1.1.1")
+`libraryDependencies += "com.imageworks.scala-migrations" % "scala-migrations_2.10" % "1.1.2" from "https://github.com/Crowdscriber/scala-migrations/raw/master/builds/scala-migrations_2.10-1.1.2.jar"`
 ```
 
-#### Ivy
+*Scala 2.11*
 
-Add the following to the dependencies section of the `ivy.xml` file,
-replacing `X.Y.Z` with your Scala version.
-
-```xml
-<dependency org="com.imageworks.scala-migrations" name="-migrations_X.Y.Z" rev="1.1.1" />
+```scala
+`libraryDependencies += "com.imageworks.scala-migrations" % "scala-migrations_2.11" % "1.1.2" from "https://github.com/Crowdscriber/scala-migrations/raw/master/builds/scala-migrations_2.11-1.1.2.jar"`
 ```
 
-#### Maven
+*Scala 2.12*
 
-Add the following snippet to the `<dependencies />` section of the
-project's `pom.xml` file, replacing `X.Y.Z` with your Scala version.
-
-```xml
-<dependency>
-    <groupId>com.imageworks.scala-migrations</groupId>
-    <artifactId>scala-migrations_X.Y.Z</artifactId>
-    <version>1.1.1</version>
-</dependency>
+```scala
+`libraryDependencies += "com.imageworks.scala-migrations" % "scala-migrations_2.12" % "1.1.2" from "https://github.com/Crowdscriber/scala-migrations/raw/master/builds/scala-migrations_2.12-1.1.2.jar"`
 ```
 
 ### Dependencies and Setup
