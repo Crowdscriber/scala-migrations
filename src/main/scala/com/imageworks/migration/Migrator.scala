@@ -633,12 +633,12 @@ class Migrator(connectionBuilder: ConnectionBuilder,
       adapter.quoteTableName(schemaMigrationsTableName)
     connection.withPreparedStatement(sql) { statement =>
       With.autoClosingResultSet(statement.executeQuery()) { rs =>
-        var versions = new immutable.TreeSet[Long]
+        var versions = new mutable.TreeSet[Long]
         while (rs.next()) {
           val versionStr = rs.getString(1)
           try {
             val version = java.lang.Long.parseLong(versionStr)
-            versions = versions.insert(version)
+            versions = versions.addOne(version)
           }
           catch {
             case e: NumberFormatException => {
